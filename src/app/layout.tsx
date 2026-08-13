@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/constants/site";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 const fontHeading = Playfair_Display({
   variable: "--font-heading",
@@ -32,7 +34,13 @@ export default function RootLayout({
       lang="en"
       className={`${fontHeading.variable} ${fontBody.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-body">{children}</body>
+      <body className="min-h-full flex flex-col font-body">
+        <Header />
+        <div className="flex-1">
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }

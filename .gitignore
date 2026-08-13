@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw/uncompressed image staging folders — never commit these
+/public/images/hero-raw/
+/public/images/rooms-raw/
+
+# scratch files
+curl_output.txt
+
+# raw source PNGs that live alongside compressed hero images
+/public/images/hero/*.png
